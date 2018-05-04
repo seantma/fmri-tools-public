@@ -1,19 +1,21 @@
-### xjview Subject-specific render
-5/4/2018, 10:25:51 AM
+### Notes on Subject-Specific brain activation render in `xjview`
+Sean Ma
+5/4/2018
 
-#### Problem 1: visualizing postive/negative activation /w Dr. D Task study
+#### Background
 `xjview` `Render View` function only uses average healthy brain for rendering. The problem becomes when subject's own brain has atrophies and needed to be rendered with his own brain. Below shows the default render from `xjview`.
 
 ![](asset/xjview_render.png)
 
-Another problem encountered was the loaded `spmT_0019.img` has continuous values instead of binary values.
+#### Problem 1: saving binary masks for postive/negative activations
+First problem encountered was the loaded `spmT_0019.img` has continuous values instead of binary values.
 > /PCN/Sean_Working/FirstLevel/DrD_scan1_noDummy_ReStart/AutoBio_noDummy_Scan134_2cond_masked/spmT_0019.img,1
 
 _==>_ Needed to **save** the Postive and Negative activations as **binary masks**. However, there is no easy way of saving **all clusters** in `xjview` so instead I had to use `spm8` to save the binary masks. _Note to `xjview` authors: Please consider a function of **saving all clusters** in addition to saving one-by-one. Thanks!_ Yet, `spm8` cannot visualize **negative activations**. Therefore, I had to again create negative contrasts for Dr.D's Task study so that I can save both **postive & negative** contrasts in `spm8` and then render them separately in `xjview`. The new **negative** contrasts generated is posted below.
 
 ![](asset/spm8_SPM.MAT_contrasts.png)
 
-#### Problem 2: visualizing postive/negative activations on Dr.D's own brainGraph
+#### Problem 2: visualizing postive/negative activations on Dr.D's own brain
 The next challenge is how to render Dr. D's own brain in `xjview` `Render View`. I've reached out to the Google help forum for `xjview` and found a thread mentioning this new rendering. After asking my subject-specific brain rendering, the author asked me to contact the one who supplied this update directly, which I did but also got no reply (see thread response below).
 
 After searching on the web, I found Dr. Justin O'Brien's great `SPM12` tutorials on Youtube. Within it,
