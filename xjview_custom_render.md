@@ -6,7 +6,7 @@
 
 ![](asset/xjview_render.png)
 
-Another problem encountered was the loaded `spmT_0019.img` has values continuous values instead of binary values.
+Another problem encountered was the loaded `spmT_0019.img` has continuous values instead of binary values.
 > /PCN/Sean_Working/FirstLevel/DrD_scan1_noDummy_ReStart/AutoBio_noDummy_Scan134_2cond_masked/spmT_0019.img,1
 
 _==>_ Needed to **save** the Postive and Negative activations as **binary masks**. However, there is no easy way of saving **all clusters** in `xjview` so instead I had to use `spm8` to save the binary masks. Yet, `spm8` cannot visualize **negative activations**. Therefore, I had to again create negative contrasts for Dr.D's Task study so that I can save both **postive & negative** contrasts in `spm8` and then render them separately in `xjview`. The new **negative** contrasts generated is posted below.
@@ -31,7 +31,7 @@ The last piece of puzzle is to render the Task activation on Dr.D's own rendered
 
 `mv render_mwc1t1spgr_208.mat xjview_render.mat`
 
-![](asset/xjview_OwnBrain_render.png)
+![](asset/xjview_OwnBrain_Render.png)
 
 #### Final render: using SPM12 instead
 While we've eventually hacked `xjview` to use Dr.D's own brain to render, it would be nice to view the render in `SPM` with the stacked column way. So back in `SPM12`, we choose `Render... > Display` and select the **warped rendered brain** `render_mwc1t1spgr_208.mat` for Dr.D as we had segmented in **Problem 2**. Afterwards, you can define how many sets of `SPM.mat` you want to include as well as the colormap which are very useful compared to `xjview`!!
