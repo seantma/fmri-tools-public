@@ -1,6 +1,5 @@
 ### Notes on Subject-Specific brain activation render in `xjview`
-Sean Ma
-5/4/2018
+Sean Ma, 5/4/2018
 
 #### Background
 `xjview` `Render View` function only uses average healthy brain for rendering. The problem becomes when subject's own brain has atrophies and needed to be rendered with his own brain. Below shows the default render from `xjview`.
