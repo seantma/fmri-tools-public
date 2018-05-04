@@ -9,7 +9,7 @@
 Another problem encountered was the loaded `spmT_0019.img` has continuous values instead of binary values.
 > /PCN/Sean_Working/FirstLevel/DrD_scan1_noDummy_ReStart/AutoBio_noDummy_Scan134_2cond_masked/spmT_0019.img,1
 
-_==>_ Needed to **save** the Postive and Negative activations as **binary masks**. However, there is no easy way of saving **all clusters** in `xjview` so instead I had to use `spm8` to save the binary masks. Yet, `spm8` cannot visualize **negative activations**. Therefore, I had to again create negative contrasts for Dr.D's Task study so that I can save both **postive & negative** contrasts in `spm8` and then render them separately in `xjview`. The new **negative** contrasts generated is posted below.
+_==>_ Needed to **save** the Postive and Negative activations as **binary masks**. However, there is no easy way of saving **all clusters** in `xjview` so instead I had to use `spm8` to save the binary masks. _Note to `xjview` authors: Please consider a function of **saving all clusters** in addition to saving one-by-one. Thanks!_ Yet, `spm8` cannot visualize **negative activations**. Therefore, I had to again create negative contrasts for Dr.D's Task study so that I can save both **postive & negative** contrasts in `spm8` and then render them separately in `xjview`. The new **negative** contrasts generated is posted below.
 
 ![](asset/spm8_SPM.MAT_contrasts.png)
 
